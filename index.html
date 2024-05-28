@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookMarker</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="head text-center">
+        <h1 class="mt-5">BookMarker</h1>
+    </div>
+    <div class="main m-5">
+        <div class="main-caption d-flex justify-content-center align-items-center my-4">
+            <i class="fa-solid fa-bookmark mx-2 fa-2x"></i>
+            <h2>Bookmark your favorite sites</h2>
+            <i class="fa-solid fa-bookmark mx-2 fa-2x"></i>
+        </div>
+        <div class="form-data py-4 d-grid">
+            <div class="inputName my-2 position-relative">
+                <i class="fa-solid fa-book-bookmark"></i>
+                <label for="nameInput">Site Name</label>
+                <input type="text" class="form-control my-2" id="nameInput" placeholder="Bookmark Name" required>
+                <i id="nameValidationIcon" class="validation-icon position-absolute"></i>
+            </div>
+            <div class="inputName py-3 position-relative">
+                <i class="fa-solid fa-link"></i>
+                <label for="urlInput">Site URL</label>
+                <input type="text" class="form-control my-2 url-input" id="urlInput" name="url" required placeholder="Website URL">
+                <i id="urlValidationIcon" class="validation-icon position-absolute"></i>
+            </div>
+            <button id="submitBtn" class="btn m-auto bg-purple px-5" onclick="addUrls()">Submit</button>
+        </div>
+    </div>
+    <table class="table mt-4 text-center bg-light maintable">
+        <thead>
+            <tr>
+                <th class="text-capitalize">index</th>
+                <th class="text-capitalize">Website Name</th>
+                <th class="text-capitalize">Visit</th>
+                <th class="text-capitalize">Delete</th>
+            </tr>
+        </thead>
+        <tbody id="tableContent">
+        </tbody>
+    </table>
+    <script src="JS/main.js"></script>
+    <script src="JS/validate.js"></script>
+</body>
+</html>
